@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color:#fff;
+    font-family: 微软雅黑;
+    font-size: 20px;
+}
+*{
+    box-sizing:border-box;
+}
+.header{
+    background-color: #999;
+    width:100vw;
+    height:150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.main{
+    width: 100vw;
+    height:700px;
+    padding: 20px 10vw;
+}
+.main>div{
+    width:20vw;
+    height:200px;
+    background-color:#999;
+    float:left;
+    margin-right: 10vw;
+    margin-top:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main>div:nth-child(3),.main>div:last-child{
+    margin-right: 0;
+}
