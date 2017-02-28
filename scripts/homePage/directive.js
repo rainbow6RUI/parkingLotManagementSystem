@@ -2,7 +2,8 @@
  * Created by lenovo on 2017-02-27.
  */
 (function(angular){
-    angular.module('mainModule').directive("homepage",
+    var app = angular.module('mainModule');
+    app.directive("homePage",
             function(){
                 return{
                     restrict:"E",
@@ -15,12 +16,12 @@
                                 "<ion-icon name=''></ion-icon>"+
                             "</div>"+
                             "<div class='main'>" +
-                                "<div>用户资料</div>"+
-                                "<div>出入管理</div>"+
-                                "<div>车辆查询</div>"+
-                                "<div>临时卡管理</div>"+
-                                "<div>会员一卡通</div>"+
-                                "<div>数据记录</div>"+
+                                "<div ui-sref='userinfo' ui-sref-active=''>用户资料</div>"+
+                                "<div ui-sref='accctrl' ui-sref-active=''>出入管理</div>"+
+                                "<div ui-sref='carinquire' ui-sref-active=''>车辆查询</div>"+
+                                "<div ui-sref='cardinquire' ui-sref-active=''>临时卡管理</div>"+
+                                "<div ui-sref='vipcard' ui-sref-active=''>会员一卡通</div>"+
+                                "<div ui-sref='datarecord' ui-sref-active=''>数据记录</div>"+
                             "</div>",
                     scope:{
                         
@@ -28,4 +29,4 @@
                 }
             }
     )
-})(angular);
+})(window.angular);
