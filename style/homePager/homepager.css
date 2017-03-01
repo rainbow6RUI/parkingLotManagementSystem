@@ -19,6 +19,24 @@ body{
     align-items: center;
     justify-content: space-around;
 }
+.header>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+}
+.header>div:nth-child(4){
+    width: 20vw;
+    border-radius: 5px;
+}
+.header>div>span{
+    font-size: 15px;
+}
+.header>div>input{
+    border-radius: 5px;
+    font-size: 13px;
+}
 .main{
     width: 100vw;
     height:700px;
@@ -32,9 +50,16 @@ body{
     margin-right: 10vw;
     margin-top:50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: width 0.5s;
+    font-size: 50px;
+}
+.main>div>span{
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
 }
 .main>div:nth-child(3),.main>div:last-child{
     margin-right: 0;
