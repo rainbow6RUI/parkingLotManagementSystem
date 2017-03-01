@@ -10,8 +10,8 @@
                     template:
                             "<div class='header'>"+
                                 "<img src='img/logo.png' alt='#'>"+
-                                "<div class='ion-laptop'><span>管理员登录</span></div>"+
-                                "<div class='ion-android-contacts'><span>工作人员交接</span></div>"+
+                                "<div class='ion-laptop' ui-sref='login' ui-sref-active=''><span>管理员登录</span></div>"+
+                                "<div class='ion-android-contacts' ui-sref='changejob' ui-sref-active=''><span>工作人员交接</span></div>"+
                                 "<div ><input type='text' placeholder='请输入查找所需关键字'/><div class='ion-android-search'></div></div>"+
                                 "<div class='ion-android-textsms'><span>站间联络</span></div>"+
                             "</div>"+
