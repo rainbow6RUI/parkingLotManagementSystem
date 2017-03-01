@@ -1,0 +1,17 @@
+.container1{
+    width: 10vw;
+    height: 100vh;
+    background-color: black;
+}
+.controller1{
+    background-color: #0a9dc7;
+    width: 3vw;
+    height: 3vw;
+    position: relative;
+    left: 8vw;
+    top: 46vh;
+    padding: 0.9vh;
+}
+.leftPicture{
+    font-size: 2em;
+}

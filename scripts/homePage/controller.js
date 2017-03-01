@@ -4,6 +4,17 @@
 (function(angular){
     var app = angular.module("mainModule");
     app.controller("mainController",["$scope",function($scope){
+        $scope.$on("$stateChangeSuccess",function (event,tostate,toParmas,formState,formparmas) {
+            if(tostate.name == "changejob"){
+                setTimeout(function () {
+                    $(".controller1").mousedown(function(e){
+                        if(1 == e.which){
+                            $(".container1").hide();
+                        }
+                    });
+                },10);
+            }
+        })
     }]);
     app.run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
