@@ -10,8 +10,8 @@
                     template:
                             "<div class='header'>"+
                                 "<img src='img/logo.png' alt='#'>"+
-                                "<ion-icon name='laptop'>管理员登录</ion-icon>"+
-                                "<ion-icon name='hand'>工作人员交接</ion-icon>"+
+                                "<ion-icon name='laptop' ui-sref='login' ui-sref-active=''>管理员登录</ion-icon>"+
+                                "<ion-icon name='hand' ui-sref='changejob' ui-sref-active=''>工作人员交接</ion-icon>"+
                                 "<ion-icon ><input type='text' placeholder='请输入查找所需关键字'/></ion-icon>"+
                                 "<ion-icon name=''></ion-icon>"+
                             "</div>"+
@@ -24,7 +24,6 @@
                                 "<div ui-sref='datarecord' ui-sref-active=''>数据记录</div>"+
                             "</div>",
                     scope:{
-                        
                     }
                 }
             }
