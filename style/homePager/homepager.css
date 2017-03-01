@@ -34,7 +34,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: width 0.5s;
 }
 .main>div:nth-child(3),.main>div:last-child{
     margin-right: 0;
+}
+.main>div:hover{
+    transform: scale(1.1);
+}
+.main>div:active{
+    transform: scale(1.1);
+    border:10px solid #cccccc;
 }
