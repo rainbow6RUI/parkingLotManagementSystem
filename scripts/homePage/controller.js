@@ -3,8 +3,7 @@
  */
 (function(angular){
     var app = angular.module("mainModule");
-    app.controller("mainController",["$scope","dataGet",function($scope){
-            
+    app.controller("mainController",["$scope",function($scope){
     }]);
     app.run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
@@ -22,30 +21,40 @@
 
         .config(function($stateProvider, $urlRouterProvider) {
             $stateProvider
+
                 .state('home', {
                     url: "/home",
                     templateUrl: "views/home.html",
                     controller: 'HomeCtrl'
                 })
+
                 .state('accctrl', {
                     url: "/accctrl",
                     templateUrl: "views/access-control.html",
                     controller: 'AccCtrl'
+
+
                 })
                 .state('userinfo', {
                     url: "/userinfo",
                     templateUrl: "views/user-information.html",
                     controller: 'UserCtrl'
+
+
                 })
                 .state('carinquire', {
                     url: "/carinquire",
                     templateUrl: "views/car-inquire.html",
                     controller: 'CarCtrl'
+
+
                 })
                 .state('cardinquire', {
                     url: "/cardinquire",
                     templateUrl: "views/card-inquire.html",
                     controller: 'CardCtrl'
+
+
                 })
                 .state('vipcard', {
                     url: "/vipcard",
@@ -58,6 +67,27 @@
                     url: "/datarecord",
                     templateUrl: "views/data-record.html",
                     controller: 'DataCtrl'
+
+
+                })
+                .state('login', {
+                    url: "/login",
+                    templateUrl: "views/login.html",
+                    controller: 'LoginCtrl'
+
+
+                })
+                .state('register', {
+                    url: "/register",
+                    templateUrl: "views/register.html",
+                    controller: 'RegisterCtrl'
+
+
+                })
+                .state('changejob', {
+                    url: "/changejob",
+                    templateUrl: "views/changejob.html",
+                    controller: 'ChangejobCtrl'
                 });
 
 
@@ -85,6 +115,15 @@
 
         })
         .controller('DataCtrl', function($scope) {
+
+        })
+        .controller('LoginCtrl', function($scope) {
+
+        })
+        .controller('RegisterCtrl', function($scope) {
+
+        })
+        .controller('ChangejobCtrl',function ($scope) {
 
         })
 })(window.angular);
