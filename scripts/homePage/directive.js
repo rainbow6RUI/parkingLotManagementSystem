@@ -6,7 +6,7 @@
     app.directive("homePage",
             function(){
                 return{
-                    restrict:"E",
+                    restrict:"ECMA",
                     template:
                             "<div class='header'>"+
                                 "<img src='img/logo.png' alt='#'>"+
