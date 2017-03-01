@@ -9,12 +9,31 @@ var router = express.Router();
 router.post("/Financial",function (req,res) {
     var object = [
         {
-            Title:"",//工资情况
-            Person:"",//申请人
-            approve:"",//批准人
-            Time:"",//申请时间
-            money:"",//申请资金
-            Income:""
+            Title:"给梅旭的工资",//工资情况
+            Person:"梅旭",//申请人
+            approve:"陈益民",//批准人
+            Time:"2017-2-28",//申请时间
+            money:233,  //申请资金
+            received:"梅旭",//收款人
+            type:"工资",
+            id:""
+        },{
+            Title:"给何瑞阳的工资",//工资情况
+            Person:"何瑞阳",//申请人
+            approve:"梅西",//批准人
+            Time:"2017-2-29",//申请时间
+            money:666,  //申请资金
+            received:"何瑞阳",//收款人
+            type:"工资"
+        },
+        {
+            Title:"给张三的工资",//工资情况
+            Person:"张三",//申请人
+            approve:"李四",//批准人
+            Time:"2017-3-29",//申请时间
+            money:998,  //申请资金
+            received:"张三",//收款人
+            type:"工资"
         }
     ];
     res.json(
