@@ -29,13 +29,22 @@ body{
 .header>div:nth-child(4){
     width: 20vw;
     border-radius: 5px;
+    background-color: #fff;
+    flex-direction: row;
+}
+.header>div:nth-child(4)>div{
+    float: left;
+    font-size: 30px;
+    color: #666;
 }
 .header>div>span{
     font-size: 15px;
 }
 .header>div>input{
+    display: block;
     border-radius: 5px;
     font-size: 13px;
+    float: left;
 }
 .main{
     width: 100vw;
@@ -55,6 +64,7 @@ body{
     justify-content: center;
     transition: width 0.5s;
     font-size: 50px;
+    cursor: pointer;
 }
 .main>div>span{
     display: block;
