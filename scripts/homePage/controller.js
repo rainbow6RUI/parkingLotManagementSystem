@@ -3,7 +3,7 @@
  */
 (function(angular){
     var app = angular.module("mainModule");
-    app.controller("mainController",["$scope",function($scope){
+    app.controller("mainController",["$scope","$http",function($scope,$http){
         $scope.$on("$stateChangeSuccess",function (event,tostate,toParmas,formState,formparmas) {
             if(tostate.name == "changejob"){
                 setTimeout(function () {
@@ -15,6 +15,14 @@
                 },10);
             }
         })
+        $scope.$on("$stateChangeSuccess",function (event,tostate,toParmas,formState,formparmas) {
+            if(tostate.name == "accctrl") {
+                $http.get("http://localhost:5555/data")
+                    .success(function (data) {
+                        $scope.CarInfo = data.carInfo;
+                    });
+            }
+        });
     }]);
     app.run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
@@ -35,6 +43,7 @@
 
                 .state('home', {
                     url: "/home",
+                    params:{"message":null},
                     templateUrl: "views/home.html",
                     controller: 'HomeCtrl'
                 })
@@ -107,10 +116,11 @@
             $urlRouterProvider.otherwise('/home');
         })
 
-        .controller('HomeCtrl', function($scope) {
+        .controller('HomeCtrl', function($scope, $state, $stateParams) {
+            console.log($stateParams.message);
         })
 
-        .controller('AccCtrl', function($scope) {
+        .controller('AccCtrl', function($scope,$state) {
 
         })
         .controller('UserCtrl', function($scope) {

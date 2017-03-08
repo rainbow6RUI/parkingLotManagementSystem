@@ -1,1 +1,112 @@
-<h1>出入管理</h1>
+<div class="acc-container">
+    <div class="left-bar">
+        <h4 class="buss-title">欢迎你，admin</h4>
+        <div class="base-info">
+            <h4>基础资料</h4>
+           <ul>
+               <li>单位信息</li>
+               <li>人员信息</li>
+               <li>车库信息</li>
+               <li>车辆信息</li>
+               <li>车辆车位设置</li>
+           </ul>
+        </div>
+        <div class="carbarn">
+            <h4>车库管理</h4>
+            <ul>
+                <li>车辆进出手动管理</li>
+                <li>车辆进出门监控</li>
+                <li>车辆进出履历</li>
+                <li>车辆故障维修</li>
+                <li>车辆与电子标签绑定</li>
+            </ul>
+        </div>
+        <div class="setsystem">
+            <h4>系统设置</h4>
+            <ul>
+                <li>用户管理</li>
+                <li>用户密码修改</li>
+                <li>系统权限设置</li>
+                <li>操作日志</li>
+                <li>退出系统</li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-bar">
+        <div class="r-title">
+        车辆管理
+        </div>
+        <div class="r-menu">
+            <div>
+                <div>
+                    <label for="">选择车库</label>
+                    <select name="" id="">
+                    <option value="">第一车库</option>
+                    <option value="">第二车库</option>
+                    <option value="">第三车库</option>
+                </select>
+                </div>
+                <div>
+                    <label for="">车型</label>
+                    <input class="cartypete" type="text">
+                    <input class="cartypebn" type="button">
+                    <input class="cartypebn" type="button">
+                </div>
+            </div>
+            <div class="r-menu-time">
+                <label for="">进出时间</label><input type="datetime-local">
+                <label for="">至</label><input type="datetime-local">
+            </div>
+            <div class="r-menu-fn">
+                <span>查询</span>
+                <span>导出</span>
+                <span>返回</span>
+            </div>
+        </div>
+        <div class="r-list">
+            <div class="car-lists">
+                    <div class="clicks">
+                        <span class="ion-arrow-down-b"></span>
+                        <span ng-repeat="cardata in CarInfo track by $index " class="{{cardata.clicks}}"></span>
+                    </div>
+                    <div class="detail">
+                        <span>明细</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.detail"></span>
+                    </div>
+                    <div class="memberGarages">
+                        <span>所属车库</span>
+                        <span ng-repeat="cardata in CarInfo track by $index" ng-bind="cardata.memberGarages "></span>
+                    </div>
+                    <div class="models">
+                        <span>车型</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.models"></span>
+                    </div>
+                    <div class="carnumber">
+                        <span>车号</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.carnumber"></span>
+                    </div>
+                    <div class="typeofout">
+                        <span>出入类型</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.typeofout"></span>
+                    </div>
+                    <div class="timeofout">
+                        <span>进出时间</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.timeofout"></span>
+                    </div>
+                    <div class="info">
+                        <span>记录信息</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.info"></span>
+                    </div>
+                    <div class="eletags">
+                        <span>电子标签</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.eletags"></span>
+                    </div>
+                    <div class="operator">
+                        <span>操作员</span>
+                        <span ng-repeat="cardata in CarInfo track by $index " ng-bind="cardata.operator"></span>
+                    </div>
+            </div>
+            <a ui-sref="home({message:'hello'})">返回</a>
+        </div>
+    </div>
+</div>
